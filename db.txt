@@ -1,24 +1,28 @@
 CARS
 
-id
-marca
-modello
-anno
-anno_immatricolazione
-posti
-porte
-danni
-km_percorsi
-colore
-vernice
-n_proprietari
-alimentazione
-cavalli
-cilindrata
-consumi
-interni
-optional
-descrizione
-regione
-stato
-prezzo
+id - INT - PRIMARY KEY - NOTNULL - AUTOINCREMENT - UNIQUE
+marca - VARCHAR(20) - NOTNULL
+modello - VARCHAR(10) - NOTNULL
+anno - YEAR - NOTNULL
+immatricolazione - DATE - NOTNULL
+posti - TINYINT - NOTNULL
+porte - TINYINT - NOTNULL
+danni - TEXT - NOTNULL
+km_percorsi - INT - NOTNULL
+colore - VARCHAR - NOTNULL
+vernice - VARCHAR - NULL
+immagine - TEXT - NOTNULL - DEFAULT("./img/no-img.jpeg")
+n_proprietari - TINYINT - NULL
+alimentazione - VARCHAR - NOTNULL
+cavalli - SMALLINT - NOTNULL
+cilindrata - SMALLINT - NOTNULL
+cambio - VARCHAR(10) - NOTNULL
+consumi - VARCHAR(50) - NOTNULL
+materiale_interni - VARCHAR(10) - NULL
+colore_interni - VARCHAR(10) - NULL
+optional - TEXT - NOTNULL
+descrizione - TEXT - NULL
+regione - VARCHAR(10) - NOTNULL
+stato - VARCHAR(10) - NOTNULL
+prezzo - DOUBLE(8, 2) - NOTNULL
+disponibilità_immediata - TINYINT NOTNULL
